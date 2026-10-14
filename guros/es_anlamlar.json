@@ -1,0 +1,32 @@
+{
+  "_aciklama": "Türkçe-İngilizce kavram köprüsü. Her gruptaki kelimeler aramada birbirinin yerine geçer. Kendi gruplarını eklemekte özgürsün; indeksi yeniden kurmak gerekmez.",
+  "gruplar": [
+    ["film", "movie", "sinema", "cinema", "izle", "watch"],
+    ["dizi", "series", "show"],
+    ["kitap", "book", "oku", "reading", "okuma"],
+    ["uzay", "space", "yildiz", "star", "galaksi", "galaxy", "astronot"],
+    ["spor", "antrenman", "workout", "training", "gym", "fitness", "egzersiz", "exercise"],
+    ["beslenme", "nutrition", "diyet", "diet", "yemek", "food", "tarif", "recipe"],
+    ["uyku", "sleep"],
+    ["saglik", "health", "doktor", "doctor"],
+    ["para", "finans", "finance", "money", "butce", "budget", "harcama", "yatirim", "investment"],
+    ["hedef", "goal", "amac", "plan", "okr"],
+    ["universite", "university", "okul", "school", "ders", "course", "sinav", "exam"],
+    ["yapayzeka", "ai", "ml", "derin ogrenme", "deep learning", "model", "llm"],
+    ["kod", "code", "coding", "programlama", "programming", "yazilim", "software"],
+    ["dil", "language", "ingilizce", "english", "kelime", "vocabulary"],
+    ["felsefe", "philosophy", "etik", "ethics"],
+    ["youtube", "kanal", "channel", "video", "icerik", "content"],
+    ["fikir", "idea", "dusunce", "beyin firtinasi", "brainstorm"],
+    ["seyahat", "travel", "gezi", "tatil", "trip"],
+    ["gorev", "task", "todo", "yapilacak"],
+    ["hatirla", "recall", "remember", "hafiza", "memory", "gecmis"],
+    ["proje", "project"],
+    ["karar", "decision", "secim"],
+    ["yedek", "backup", "arsiv", "archive", "geri yukleme", "restore"],
+    ["hata", "error", "bug", "ariza", "sorun", "problem"],
+    ["not", "note", "notes", "hizli", "quick"],
+    ["toplanti", "meeting", "gorusme"],
+    ["is", "work", "kariyer", "career"]
+  ]
+}
