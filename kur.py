@@ -244,20 +244,20 @@ def _protokol_yaz(k, yol, metin, import_ile):
     mevcut = oku(yol)
     ad = yol.name
     if not yol.exists():
-        k.adim(f"{ad}: GurOS protokolü yazılacak", lambda: yaz(yol, metin))
+        k.adim(f"{ad}: GurOS protokolünü yaz", lambda: yaz(yol, metin))
     elif ISARET_BAS in mevcut and ISARET_SON in mevcut:
         bas, son = mevcut.index(ISARET_BAS), mevcut.index(ISARET_SON) + len(ISARET_SON)
         yeni = mevcut[:bas] + metin.strip() + mevcut[son:]
         if yeni != mevcut:
-            k.adim(f"{ad}: GurOS bloğu güncellenecek (blok dışındaki metnine dokunulmaz)", lambda: yaz(yol, yeni))
+            k.adim(f"{ad}: GurOS bloğunu güncelle (blok dışındaki metnine dokunulmaz)", lambda: yaz(yol, yeni))
     elif import_ile and "@CLAUDE.guros.md" in mevcut:
         _protokol_yaz(k, yol.with_name("CLAUDE.guros.md"), metin, import_ile=False)   # set up on an earlier run
     elif import_ile:
         ek = yol.with_name("CLAUDE.guros.md")
-        k.adim(f"{ad} zaten var: protokol CLAUDE.guros.md'ye yazılacak, {ad} sonuna tek satır '@CLAUDE.guros.md' eklenecek",
+        k.adim(f"{ad} zaten var: protokolü CLAUDE.guros.md'ye yaz, {ad} sonuna tek satır '@CLAUDE.guros.md' ekle",
                lambda: (yaz(ek, metin), yaz(yol, mevcut.rstrip("\n") + "\n\n@CLAUDE.guros.md\n")))
     else:
-        k.adim(f"{ad} zaten var: GurOS bloğu dosyanın sonuna eklenecek (var olan metne dokunulmaz)",
+        k.adim(f"{ad} zaten var: GurOS bloğunu dosyanın sonuna ekle (var olan metne dokunulmaz)",
                lambda: yaz(yol, mevcut.rstrip("\n") + "\n\n" + metin))
 
 
