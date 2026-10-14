@@ -20,7 +20,7 @@ import ortak  # noqa: E402
 
 SURUM = 3
 ATLANAN = {".obsidian", ".trash", ".git", ".claude", ".github", "node_modules", "__pycache__"}
-PROTOKOL_DOSYALARI = {"CLAUDE.md", "AGENTS.md", "CLAUDE.guros.md"}
+PROTOKOL_DOSYALARI = {"CLAUDE.md", "AGENTS.md", "CLAUDE.guros.md", "👋 Başlarken.md"}
 DURAK = set("""ve ile bir bu su o da de mi mu ki en cok icin gibi daha ama veya ya ne nasil neden olan olarak
 misin musun misiniz musunuz miyim muyum bana beni benim bende sen ben sana seni senin biz bize bizim onu ona onun
 sey seyi seyler var yok nedir neler nerede hangi kim bi biraz lutfen tamam evet hayir simdi hep her hic
@@ -80,7 +80,7 @@ def _kaynaklar(vault, ay):
                              and not ortak.ozel_mi(goreli_kok / d, ay))
         for ad in sorted(dosyalar):
             if goreli_kok == Path(".") and ad in PROTOKOL_DOSYALARI:
-                continue                    # the protocol mentions every topic; indexed, it would answer every query
+                continue                    # protocol and welcome note mention every topic; indexed, they would answer every query
             if ad.lower().endswith(".md") and not ortak.ozel_mi(goreli_kok / ad, ay):
                 yield (goreli_kok / ad).as_posix()
 

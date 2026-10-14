@@ -40,7 +40,8 @@ class KuruluVault(unittest.TestCase):
         cls.tmp = Path(tempfile.mkdtemp(prefix="guros-test-"))
         cls.vault = (cls.tmp / "Deneme Vault").resolve()
         cls.durum = cls.tmp / "durum"
-        cls.ortam = dict(os.environ, GUROS_VAULT=str(cls.vault), GUROS_STATE=str(cls.durum), PYTHONIOENCODING="utf-8")
+        cls.ortam = dict(os.environ, GUROS_VAULT=str(cls.vault), GUROS_STATE=str(cls.durum), PYTHONIOENCODING="utf-8",
+                         GUROS_CLAUDE="0", NO_COLOR="1")
         if cls.ornek_notlar:
             yaz(cls.vault / "Filmler" / "Interstellar.md",
                 "# Interstellar\n\nUzay, kara delik ve zaman üzerine bir bilim kurgu. Christopher Nolan.\n")

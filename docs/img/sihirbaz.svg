@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 596" width="980" height="596" role="img" aria-label="GurOS kurulum sihirbazı ekranı">
+  <style>
+    text { font: 15px ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, Menlo, monospace; }
+  </style>
+  <rect width="980" height="596" rx="14" fill="#0f0e17"/>
+  <rect width="980" height="38" rx="14" fill="#1c1a29"/>
+  <rect y="24" width="980" height="14" fill="#1c1a29"/>
+  <circle cx="24" cy="19" r="6.5" fill="#ff5f57"/><circle cx="46" cy="19" r="6.5" fill="#febc2e"/><circle cx="68" cy="19" r="6.5" fill="#28c840"/>
+  <text x="490" y="24" text-anchor="middle" fill="#8b8aa0" style="font-size:13px">GurOS kurulumu</text>
+  <text x="28" y="80"><tspan fill="#8b8aa0">PS&#160;C:\Users\ayse&gt;&#160;</tspan><tspan fill="#e5e7eb">irm&#160;https://raw.githubusercontent.com/guraygur0/guros-ikinci-beyin/main/kur.ps1&#160;|&#160;iex</tspan></text>
+  <rect x="42" y="124" width="520" height="34" rx="8" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="302" y="146" text-anchor="middle" fill="#e5e7eb" font-weight="700">GurOS 1.1.0 · Obsidian için yapay zekâ ikinci beyin</text>
+  <text x="28" y="190"><tspan fill="#e5e7eb">&#160;&#160;Birkaç&#160;soru&#160;soracağım.&#160;</tspan><tspan fill="#e5e7eb" font-weight="700">Sen&#160;onaylamadan&#160;hiçbir&#160;şey&#160;yazılmaz.</tspan></text>
+  <text x="28" y="234"><tspan fill="#c084fc" font-weight="700">&#160;&#160;1.&#160;</tspan><tspan fill="#e5e7eb" font-weight="700">Vault&#160;nerede?</tspan></text>
+  <text x="28" y="256"><tspan fill="#c084fc">&#160;&#160;&#160;&#160;&#160;&#160;&#160;1</tspan><tspan fill="#e5e7eb">)&#160;Notlarım&#160;&#160;&#160;&#160;</tspan><tspan fill="#8b8aa0">C:\Users\ayse\Documents\Notlarım</tspan></text>
+  <text x="28" y="278"><tspan fill="#c084fc">&#160;&#160;&#160;&#160;&#160;&#160;&#160;2</tspan><tspan fill="#e5e7eb">)&#160;Yeni&#160;vault&#160;&#160;</tspan><tspan fill="#8b8aa0">C:\Users\ayse\Documents\GurOS</tspan></text>
+  <text x="28" y="300"><tspan fill="#e5e7eb">&#160;&#160;&#160;&#160;&#160;Seçimin&#160;</tspan><tspan fill="#8b8aa0">[1]</tspan><tspan fill="#e5e7eb">:&#160;1</tspan></text>
+  <text x="28" y="322"><tspan fill="#c084fc" font-weight="700">&#160;&#160;2.&#160;</tspan><tspan fill="#e5e7eb" font-weight="700">Adın</tspan><tspan fill="#e5e7eb">:&#160;Ayşe&#160;&#160;&#160;&#160;&#160;&#160;</tspan><tspan fill="#c084fc" font-weight="700">3.&#160;</tspan><tspan fill="#e5e7eb" font-weight="700">Asistan&#160;</tspan><tspan fill="#8b8aa0">[Logos]</tspan><tspan fill="#e5e7eb">:</tspan></text>
+  <text x="28" y="344"><tspan fill="#c084fc" font-weight="700">&#160;&#160;4.&#160;</tspan><tspan fill="#e5e7eb" font-weight="700">Adından&#160;özel&#160;olduğu&#160;anlaşılan&#160;klasör&#160;</tspan><tspan fill="#8b8aa0">(içine&#160;bakmadım)</tspan><tspan fill="#e5e7eb">:&#160;&#160;Günlük</tspan></text>
+  <text x="28" y="366"><tspan fill="#e5e7eb" font-weight="700">&#160;&#160;?&#160;</tspan><tspan fill="#e5e7eb">Bunlar&#160;yapay&#160;zekâya&#160;kapalı&#160;kalsın&#160;mı?&#160;</tspan><tspan fill="#8b8aa0">[E/h]</tspan><tspan fill="#e5e7eb">&#160;e</tspan></text>
+  <text x="28" y="410"><tspan fill="#e5e7eb" font-weight="700">&#160;&#160;Notlar&#160;&#160;&#160;&#160;&#160;&#160;&#160;</tspan><tspan fill="#4ade80">+&#160;</tspan><tspan fill="#e5e7eb">Hedefler&#160;·&#160;Quick&#160;Notes&#160;·&#160;Başlarken&#160;·&#160;Projeler/&#160;·&#160;Özel&#160;Alan/</tspan></text>
+  <text x="28" y="432"><tspan fill="#e5e7eb" font-weight="700">&#160;&#160;Hafıza&#160;&#160;&#160;&#160;&#160;&#160;&#160;</tspan><tspan fill="#4ade80">+&#160;</tspan><tspan fill="#e5e7eb">Logos/&#160;—&#160;Core,&#160;Facts,&#160;Threads,&#160;Last-Session,&#160;Kararlar</tspan></text>
+  <text x="28" y="454"><tspan fill="#e5e7eb" font-weight="700">&#160;&#160;Claude&#160;Code&#160;&#160;</tspan><tspan fill="#4ade80">+&#160;</tspan><tspan fill="#e5e7eb">7&#160;komut&#160;·&#160;5&#160;kanca&#160;·&#160;gizlilik&#160;kuralları&#160;·&#160;izinler</tspan></text>
+  <text x="28" y="476"><tspan fill="#e5e7eb" font-weight="700">&#160;&#160;?&#160;</tspan><tspan fill="#e5e7eb">Kurayım&#160;mı?&#160;</tspan><tspan fill="#8b8aa0">[E/h]</tspan><tspan fill="#e5e7eb">&#160;e</tspan></text>
+  <text x="28" y="520"><tspan fill="#4ade80">&#160;&#160;✓&#160;</tspan><tspan fill="#e5e7eb">5&#160;kanca&#160;bağlı&#160;&#160;&#160;</tspan><tspan fill="#4ade80">✓&#160;</tspan><tspan fill="#e5e7eb">gizlilik&#160;koruması&#160;çalışıyor&#160;&#160;&#160;</tspan><tspan fill="#4ade80">✓&#160;</tspan><tspan fill="#e5e7eb">0&#160;hata</tspan></text>
+  <text x="28" y="542"><tspan fill="#4ade80" font-weight="700">&#160;&#160;✔&#160;Kurulum&#160;tamam.</tspan></text>
+  <text x="28" y="564"><tspan fill="#e5e7eb" font-weight="700">&#160;&#160;?&#160;</tspan><tspan fill="#e5e7eb">Claude&#160;Code'u&#160;şimdi&#160;bu&#160;vault'ta&#160;yeni&#160;bir&#160;pencerede&#160;açayım&#160;mı?&#160;</tspan><tspan fill="#8b8aa0">[E/h]</tspan></text>
+</svg>

@@ -42,8 +42,23 @@ yeniden düşün". Koşulu olmayan bir karar, sorgulanamayan bir inanca dönüş
 | PreCompact | `sikistir` | Bir sonraki durmada yazımı zorunlu kılar. Böylece ayrıntılar özetlenmeden kaydedilir. |
 | PreToolUse | `koruma` | Özel klasöre dokunan araç çağrısını çıkış kodu 2 ile engeller ve gerekçeyi asistana iletir. |
 
+Kancalar "exec" biçimindedir: Claude Code Python'u araya kabuk koymadan, komut ve argüman listesiyle başlatır.
+Bu yüzden Git Bash, PowerShell ya da zsh fark etmez; boşluklu yollar da sorun çıkarmaz. Bu biçim Claude Code
+2.1.139 ve üstünü ister; doktor daha eski bir sürüm görürse uyarır.
+
 Bir kanca çökerse oturumu kilitlememek için sessizce geçer: çıkış kodu 0 döner ve hata stderr'e
 yazılır. Tek istisna gizlilik korumasıdır, çünkü işi "hayır" demektir.
+
+**İzinler.** Kurulum iki dar izin kuralı ekler, böylece asistan hafızayı güncellerken her seferinde onay sormaz:
+
+- hafıza klasörüne yazma: `Edit(./🔮 Logos/**)`;
+- GurOS'un altı betiğini çalıştırma: `recall`, `baglam`, `devir`, `epizot`, `proje`, `doktor`.
+
+Kurallarda betik adları tek tek yazılıdır; `.claude/guros/*` gibi bir joker kullanılmaz, çünkü joker başka bir
+dosyayı çalıştırmaya da izin verirdi. Dışarı veri gönderen yedek (`yedek.py`) her seferinde onay ister.
+
+Claude Code proje kancalarını ve izinlerini, klasör için **"Do you trust the files in this folder?"** sorusuna
+Yes dendikten sonra devreye alır. Güven ekranı bu kancaları ve izinleri listeler.
 
 Sayaçlar ve arama indeksi vault'ta değil, makineye özel durum klasöründe tutulur:
 `~/.guros/<vault>-<iz>/`. Böylece eşitleme araçları her mesajda dosya değişikliği görmez. Bu yer

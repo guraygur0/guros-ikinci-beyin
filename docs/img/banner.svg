@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="GurOS — Obsidian için yapay zekâ ikinci beyin">
+  <defs>
+    <linearGradient id="zemin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14112b"/>
+      <stop offset="0.55" stop-color="#1e1846"/>
+      <stop offset="1" stop-color="#2d1b5e"/>
+    </linearGradient>
+    <radialGradient id="isik" cx="0.79" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cekirdek">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#e9d5ff"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </radialGradient>
+    <linearGradient id="yazi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d8b4fe"/>
+    </linearGradient>
+    <style>
+      .baslik { font: 800 112px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; letter-spacing: -3px; }
+      .alt { font: 500 34px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #e9e5ff; }
+      .cip { font: 600 18px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #ede9fe; }
+      .kucuk { font: 500 17px ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace; fill: #a5a0c8; }
+    </style>
+  </defs>
+  <rect width="1280" height="400" rx="28" fill="url(#zemin)"/>
+  <rect width="1280" height="400" rx="28" fill="url(#isik)"/>
+  <g stroke="#a78bfa" stroke-opacity="0.35" stroke-width="1.5">
+    <line x1="1010" y1="200" x2="1136" y2="249"/>
+    <line x1="1010" y1="200" x2="833" y2="119"/>
+    <line x1="1010" y1="200" x2="1130" y2="223"/>
+    <line x1="1010" y1="200" x2="1018" y2="314"/>
+    <line x1="1010" y1="200" x2="1043" y2="150"/>
+    <line x1="1010" y1="200" x2="909" y2="113"/>
+    <line x1="1010" y1="200" x2="907" y2="156"/>
+    <line x1="1010" y1="200" x2="962" y2="168"/>
+    <line x1="1136" y1="249" x2="1130" y2="223"/>
+    <line x1="1136" y1="249" x2="1197" y2="245"/>
+    <line x1="1136" y1="249" x2="1127" y2="271"/>
+    <line x1="1136" y1="249" x2="1098" y2="240"/>
+    <line x1="833" y1="119" x2="868" y2="151"/>
+    <line x1="833" y1="119" x2="899" y2="151"/>
+    <line x1="1130" y1="223" x2="1197" y2="245"/>
+    <line x1="1130" y1="223" x2="1098" y2="240"/>
+    <line x1="1130" y1="223" x2="1132" y2="165"/>
+    <line x1="1018" y1="314" x2="953" y2="340"/>
+    <line x1="1018" y1="314" x2="951" y2="274"/>
+    <line x1="1043" y1="150" x2="1023" y2="83"/>
+    <line x1="909" y1="113" x2="907" y2="156"/>
+    <line x1="909" y1="113" x2="958" y2="111"/>
+    <line x1="909" y1="113" x2="899" y2="151"/>
+    <line x1="907" y1="156" x2="868" y2="151"/>
+    <line x1="907" y1="156" x2="962" y2="168"/>
+    <line x1="907" y1="156" x2="899" y2="151"/>
+    <line x1="887" y1="255" x2="911" y2="282"/>
+    <line x1="887" y1="255" x2="809" y2="235"/>
+    <line x1="887" y1="255" x2="855" y2="270"/>
+    <line x1="943" y1="340" x2="911" y2="282"/>
+    <line x1="943" y1="340" x2="953" y2="340"/>
+    <line x1="1127" y1="271" x2="1098" y2="240"/>
+    <line x1="911" y1="282" x2="855" y2="270"/>
+    <line x1="911" y1="282" x2="951" y2="274"/>
+    <line x1="868" y1="151" x2="899" y2="151"/>
+    <line x1="958" y1="111" x2="962" y2="168"/>
+    <line x1="958" y1="111" x2="1023" y2="83"/>
+    <line x1="809" y1="235" x2="855" y2="270"/>
+    <line x1="953" y1="340" x2="951" y2="274"/>
+    <line x1="1133" y1="102" x2="1121" y2="161"/>
+    <line x1="1133" y1="102" x2="1132" y2="165"/>
+    <line x1="1121" y1="161" x2="1132" y2="165"/>
+  </g>
+    <circle cx="1010" cy="200" r="15" fill="url(#cekirdek)"/>
+    <circle cx="1136" cy="249" r="5" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="833" cy="119" r="4" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1130" cy="223" r="3" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1018" cy="314" r="3" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1043" cy="150" r="4" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="909" cy="113" r="3" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="907" cy="156" r="4" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1197" cy="245" r="5" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="887" cy="255" r="8" fill="#a78bfa" opacity="0.85"/>
+    <circle cx="943" cy="340" r="4" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1127" cy="271" r="4" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="911" cy="282" r="3" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="868" cy="151" r="6" fill="#a78bfa" opacity="0.85"/>
+    <circle cx="958" cy="111" r="5" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="809" cy="235" r="5" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="953" cy="340" r="4" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1098" cy="240" r="6" fill="#a78bfa" opacity="0.85"/>
+    <circle cx="1133" cy="102" r="5" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="962" cy="168" r="8" fill="#a78bfa" opacity="0.85"/>
+    <circle cx="855" cy="270" r="4" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1121" cy="161" r="3" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1023" cy="83" r="5" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="951" cy="274" r="6" fill="#a78bfa" opacity="0.85"/>
+    <circle cx="899" cy="151" r="3" fill="#c4b5fd" opacity="0.85"/>
+    <circle cx="1132" cy="165" r="3" fill="#c4b5fd" opacity="0.85"/>
+  <text x="66" y="168" class="baslik" fill="url(#yazi)">GurOS</text>
+  <text x="70" y="226" class="alt">Obsidian için yapay zekâ ikinci beyin</text>
+  <rect x="72" y="282" width="159" height="38" rx="19" fill="#ffffff" fill-opacity="0.08" stroke="#c4b5fd" stroke-opacity="0.45"/>
+  <text x="151" y="307" text-anchor="middle" class="cip">kalıcı hafıza</text>
+  <rect x="245" y="282" width="179" height="38" rx="19" fill="#ffffff" fill-opacity="0.08" stroke="#c4b5fd" stroke-opacity="0.45"/>
+  <text x="334" y="307" text-anchor="middle" class="cip">otomatik bağlam</text>
+  <rect x="438" y="282" width="138" height="38" rx="19" fill="#ffffff" fill-opacity="0.08" stroke="#c4b5fd" stroke-opacity="0.45"/>
+  <text x="507" y="307" text-anchor="middle" class="cip">yerel arama</text>
+  <rect x="590" y="282" width="199" height="38" rx="19" fill="#ffffff" fill-opacity="0.08" stroke="#c4b5fd" stroke-opacity="0.45"/>
+  <text x="690" y="307" text-anchor="middle" class="cip">gizlilik koruması</text>
+  <text x="72" y="364" class="kucuk">Claude Code · Codex · Windows · macOS · Linux · yalnız Python standart kütüphanesi</text>
+</svg>
