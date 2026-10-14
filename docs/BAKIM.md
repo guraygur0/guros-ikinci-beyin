@@ -53,20 +53,30 @@ cihazlar arasında taşır, git geçmişi tutar.
 
 ## Güncelleme
 
+En kolayı kurulum komutunu yeniden çalıştırmak:
+
+- Windows: `irm https://raw.githubusercontent.com/guraygur0/guros-ikinci-beyin/main/kur.ps1 | iex`
+- macOS / Linux: `curl -fsSL https://raw.githubusercontent.com/guraygur0/guros-ikinci-beyin/main/kur.sh | bash`
+
+Bu komut paketi günceller ve sihirbazı açar. Sihirbaz kurulu sistemi tanır; **Güncelle**'yi seç.
+
+Elle güncellemek istersen:
+
 ```bash
 cd guros-ikinci-beyin
 git pull
-python kur.py --vault "<vault>" --ad "<ad>" --uygula
+python kur.py --vault "<vault>" --uygula
 ```
 
 Yeniden kurulum şunları yeniler:
 
 - `.claude/guros/` altındaki kod,
 - `CLAUDE.md` ve `AGENTS.md` içindeki GurOS bloğu,
-- kancalar.
+- kancalar ve izin kuralları.
 
 Notlara, hafıza dosyalarına, ayarlarına (`ayarlar.json`) ve kendi eklediğin komutlara dokunmaz.
-`CLAUDE.md` içinde `<!-- GUROS:PROTOKOL -->` bloğunun dışına yazdıkların korunur.
+`CLAUDE.md` içinde `<!-- GUROS:PROTOKOL -->` bloğunun dışına yazdıkların korunur. Bir bayrak verirsen (ör.
+`--ozel`), o değer `ayarlar.json`'daki eskisinin yerine geçer.
 
 ## Ayarlar
 
@@ -93,9 +103,16 @@ python kur.py --vault "<vault>" --kaldir           # plan
 python kur.py --vault "<vault>" --kaldir --uygula  # uygula
 ```
 
-Kancalar `settings.json`'dan çıkarılır, `.claude/guros/` silinir ve zamanlanmış görev kaldırılır.
-Notların, hafıza klasörün, `CLAUDE.md` ve `AGENTS.md` yerinde kalır. Özel klasörün izin kuralları da
-koruma olarak kalır. İstersen GurOS bloğunu elle silebilirsin.
+Sihirbazdan da kaldırabilirsin: kurulum komutunu yeniden çalıştır ve **Kaldır**'ı seç.
+
+Kaldırma şunları yapar:
+
+- kancaları ve GurOS izinlerini `settings.json`'dan çıkarır (senin eklediğin kurallar kalır),
+- GurOS komutlarını ve `.claude/guros/` klasörünü siler, zamanlanmış görevi kaldırır,
+- `CLAUDE.md` ve `AGENTS.md` içinden GurOS bloğunu çıkarır. Blok dışında metin yoksa dosya silinir; varsa o metne
+  dokunulmaz.
+
+Notların, hafıza klasörün ve özel klasörlerin yerinde kalır. Özel klasörlerin izin kuralları da koruma olarak kalır.
 
 ## Sorun giderme
 
@@ -103,7 +120,8 @@ koruma olarak kalır. İstersen GurOS bloğunu elle silebilirsin.
 
 | Belirti | Neden ve çözüm |
 |---|---|
-| Açılışta bağlam gelmiyor | Claude Code vault klasöründe başlatılmamış. Kancalar yalnızca başlatılan klasörün `.claude/settings.json` dosyasından yüklenir. |
+| Açılışta bağlam gelmiyor | Claude Code vault klasöründe başlatılmamış ya da "Do you trust the files in this folder?" sorusuna Yes denmemiş. Kancalar yalnızca başlatılan ve güvenilen klasörün `.claude/settings.json` dosyasından yüklenir. |
+| Asistan hafızaya her yazışta izin soruyor | Klasöre güven onayı verilmemiş ya da kurulum 1.0.0'dan kalma. Yeniden kur; güven sorusuna Yes de. |
 | "kancaların Python yolu yok" | Kurulumda kullanılan Python taşındı ya da silindi. `kur.py --uygula` ile yeniden kur. |
 | Asistan vault genelinde arama yapamıyor | Bu bilerek böyledir: kökten özyinelemeli arama özel klasöre de girer. Recall'u (`/recall`) kullan ya da aramayı bir alt klasöre daralt. |
 | Recall ilgili notu bulmuyor | `python .claude/guros/recall.py kur` ile indeksi yeniden kur. Kelime eş anlamlı bir sözcükse `es_anlamlar.json` dosyasına grup ekle. |

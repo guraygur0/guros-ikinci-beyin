@@ -8,6 +8,8 @@ Exit code 1 when something is broken (✗); warnings (⚠) do not fail.
 import io
 import json
 import os
+import re
+import shutil
 import subprocess
 import sys
 import time
@@ -34,6 +36,26 @@ class Rapor:
     def kotu(self, m):
         self.hata += 1
         print(f"  ✗ {m}")
+
+
+CLAUDE_EN_AZ = (2, 1, 139)       # hooks are written in exec form ("args"), which arrived in this release
+
+
+def _kanca_metni(h):
+    return " ".join([str(h.get("command", "")), *(str(x) for x in (h.get("args") or []))]).replace("\\", "/").replace('"', "")
+
+
+def _claude_surumu():
+    """Installed Claude Code version as a tuple, or None when it is not installed or does not answer."""
+    yol = None if os.environ.get("GUROS_CLAUDE") == "0" else shutil.which("claude")
+    if not yol:
+        return None
+    try:
+        cikti = subprocess.run([yol, "--version"], capture_output=True, text=True, timeout=20).stdout
+    except (OSError, subprocess.SubprocessError):
+        return None
+    m = re.search(r"(\d+)\.(\d+)\.(\d+)", cikti or "")
+    return tuple(int(x) for x in m.groups()) if m else None
 
 
 def _kanca_calistir(vault, olay, girdi):
@@ -88,18 +110,33 @@ def kontrol(sessiz=False):
     if kancalar is None:
         r.kotu(".claude/settings.json okunamadı; kancalar bağlı değil")
     else:
-        eksik = [olay for olay, alt in OLAYLAR.items()
-                 if not any(f"kancalar.py\" {alt}" in h.get("command", "") or f"kancalar.py {alt}" in h.get("command", "")
-                            for grup in kancalar.get(olay, []) for h in grup.get("hooks", []))]
+        bizim = {olay: [h for grup in kancalar.get(olay, []) for h in grup.get("hooks", []) if "kancalar.py" in _kanca_metni(h)]
+                 for olay in OLAYLAR}
+        eksik = [olay for olay, alt in OLAYLAR.items() if not any(_kanca_metni(h).endswith(" " + alt) for h in bizim[olay])]
         if eksik:
-            r.kotu("bağlı olmayan kancalar: " + ", ".join(eksik))
+            r.kotu("bağlı olmayan kancalar: " + ", ".join(eksik) + " (kur.py yeniden çalıştırılabilir)")
         else:
             r.iyi("5 kanca bağlı (açılış, mesaj, durma, sıkıştırma, gizlilik)")
-        komutlar = [h.get("command", "") for gruplar in kancalar.values() for grup in gruplar for h in grup.get("hooks", [])]
-        yorumlayici = {k.split('"')[1] for k in komutlar if k.startswith('"') and "kancalar.py" in k}
-        for y in yorumlayici:
-            if not Path(y).exists():
-                r.kotu(f"kancaların Python yolu yok: {y} (Python taşındıysa kur.py'yi yeniden çalıştır)")
+        eski_bicim = False
+        for h in {id(h): h for liste in bizim.values() for h in liste}.values():
+            if h.get("args"):
+                yorumlayici, betik = h.get("command", ""), str(h["args"][0])
+            else:                                   # shell form written by 1.0.0: "<python>" "<script>" <event>
+                parca = h.get("command", "").split('"')
+                yorumlayici, betik = (parca[1], parca[3]) if len(parca) > 3 else ("", "")
+                eski_bicim = True
+            if yorumlayici and Path(yorumlayici).is_absolute() and not Path(yorumlayici).exists():
+                r.kotu(f"kancaların Python yolu yok: {yorumlayici} (Python taşındıysa kur.py'yi yeniden çalıştır)")
+                break
+            if betik and not Path(betik).exists():
+                r.kotu(f"kanca betiği yok: {betik} (vault taşındıysa kur.py'yi yeniden çalıştır)")
+                break
+        if eski_bicim:
+            r.uyar("kancalar eski biçimde (Git Bash olmayan Windows'ta çalışmaz); kur.py --uygula ile güncelle")
+        surum = _claude_surumu()
+        if surum and surum < CLAUDE_EN_AZ:
+            r.uyar(f"Claude Code {'.'.join(map(str, surum))} eski; kancalar {'.'.join(map(str, CLAUDE_EN_AZ))}+ ister. "
+                   "Güncelle: claude update")
 
     if ay.get("ozel_klasorler"):
         ornek = ay["ozel_klasorler"][0]

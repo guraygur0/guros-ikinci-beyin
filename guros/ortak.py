@@ -14,7 +14,7 @@ import tempfile
 import unicodedata
 from pathlib import Path
 
-SURUM = "1.0.0"
+SURUM = "1.1.0"
 KOD = Path(__file__).resolve().parent            # <vault>/.claude/guros
 VARSAYILAN = {
     "ad": "Kullanıcı",
